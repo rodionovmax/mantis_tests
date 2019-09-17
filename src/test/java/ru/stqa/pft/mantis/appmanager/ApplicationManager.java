@@ -43,6 +43,12 @@ public class ApplicationManager {
         driver.quit();
     }
 
+    public HttpSession newSeesion(){
+        return new HttpSession(this);
+    }
 
 
+    public String getProperty(String key) {
+        return properties.getProperty(key);
+    }
 }
